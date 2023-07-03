@@ -1,0 +1,284 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    font-family: 'Poppins', sans-serif;    
+    font-size:16px;   
+}
+.container{
+    max-width:120rem;
+    margin:0 auto;
+}
+.header-principal{
+    background-image: url('imagenes/fondo-madera-natural.jpg');
+}
+.img-logo{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    margin-right:50px;
+}
+.iconos{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1rem 0;
+}
+.text, .text-carrito, .number{
+    font-weight:600;
+    font-size:16px;
+}
+.soporte-cliente{
+    display:flex;
+    align-items:center;
+    gap:2rem;
+}
+.content-soporte{
+    display:flex;
+    flex-direction:column;
+}
+#icono-soporte{
+    margin-left:10px;
+}
+.container-user{
+    display:flex;
+    gap:1rem;
+    cursor:pointer;
+}
+.number-carrito{
+    margin-right:10px;
+}
+#usuario, #cesta, #icono-soporte{
+    font-size:2rem;
+    color: rgb(29, 54, 29);
+    padding-left:1rem;
+}
+.shopping-content-cart{
+    display:flex;
+    flex-direction:column;
+    margin-right:30px;
+}
+.container-navbar{
+    background-color: rgb(113, 68, 68);
+    /*background-color:rgb(109, 161, 113);*/
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1rem 0;
+
+}
+nav ul{
+    list-style: none;
+    display: inline-block;
+}
+.menu{
+    display:flex;
+    gap:2rem;
+}
+#icono-desplegable{
+    display:none;
+}
+.menu li{
+    list-style:none;
+    margin-left:60px;
+}
+.menu a{
+    text-decoration:none;
+    color:white;
+    font-weight: 600;
+    font-size:18px;
+}
+.menu a:hover{
+    color:rgb(137, 108, 138);
+}
+.search-form{
+    position:relative;
+    display:flex;
+    align-items:center;
+    margin-right:20px;
+    border: 2px solid white;
+    border-radius:2rem;
+    background-color:rgb(233, 206, 206);
+    height:3.4rem;
+    overflow:hidden;
+}
+.search-form input{
+    outline:none;
+    font-family:inherit;
+    border:none;
+    width:25rem;
+    background-color:rgb(233, 206, 206);
+    font-size:1.1rem;
+    padding: 0 2rem;
+    color:rgb(58,78,58);
+    cursor:pointer;
+    
+}
+.btn-search{
+    border:none;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    background-color:rgb(220, 231, 221);
+    height:100%;
+    padding:1rem;
+}
+.btn-search i{
+    font-size:1.5rem;
+}
+.banner{
+    background-image:linear-gradient(100deg, rgb(28, 25, 25), #00000010),url(imagenes/turistas-compras.jpg);
+    height:30rem;
+    background-size:cover;
+    background-position:center;
+    align-items: center;
+    display: flex;
+    justify-content:center;
+}
+.content-banner{
+    margin-top:700px;
+    max-width:90rem;
+    text-align:center;
+    /*padding: 25rem 0;*/
+}
+.content-banner h2{
+    color:rgb(201, 189, 189);
+    font-size:2.5rem;
+    font-weight:500;
+    line-height: 1.2;
+    margin-bottom:10px;
+}
+.content-banner p{
+    color:white;
+    margin-bottom:10px;
+}
+.content-banner a{
+    text-decoration:none;
+    color:white;
+    background-color: rgb(154, 119, 87);
+    padding: 1rem 3rem;
+    display:inline-block;
+    border-radius:3rem;
+    margin-bottom:600px;
+
+}
+.mix{
+    width:300px;
+    height:250px;
+}
+/***MAIN CONTENT***/
+h1{
+    text-align:center;
+}
+.main-content{
+    background-color:rgb(196, 202, 196) ;
+}
+.container-features{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:3rem;
+    padding:3rem 0;
+}
+.card-features{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:1.5rem;
+    background-color:white;
+    border-radius:1rem;
+    padding:1.5rem 0;
+}
+#plane{
+    margin-left:20px;
+}
+#services{
+    margin-right:20px;
+}
+.card-features i{
+    font-size:1.7rem;
+    color:rgb(29,54,29);
+    margin-left:10px;
+}
+.feature-content{
+    display:flex;
+    flex-direction:column;
+    gap: 0.5rem;
+}
+.feature-content span{
+    font-weight:700;
+    font-size:1.2rem;
+    color:rgb(14, 13, 13);
+}
+.feature-content p{
+    color:#777;
+    font-weight: 500;
+
+}
+.content-top-categories{
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+    margin-bottom:3rem;
+}
+.container-categories{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:3rem;
+}
+.card-categories{
+    height:20rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    border-radius:2rem;
+    gap:2rem;
+}
+#card1{
+    margin-left:15px;
+    background-image:linear-gradient(#00000080, #00000080),url("imagenes/mix-frutos-secos.jpg");
+    background-size:cover;
+    background-position:bottom;
+    background-repeat: no-repeat;
+}
+#card2{
+    background-image:linear-gradient(#00000080, #00000080),url("imagenes/barras-proteicas.jpg");
+    background-size:cover;
+    background-position:bottom;
+    background-repeat: no-repeat;
+}
+#card3{
+    background-image:linear-gradient(#00000080, #00000080),url("imagenes/yerba-orgánica.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    margin-right:15px;
+}
+.card-categories p{
+    font-size:2.5rem;
+    color:white;
+    text-transform:capitalize;
+    position:relative;
+}
+.card-categories p::after{
+    content:'';
+    width:2.5rem;
+    height:2px;
+    background-color:white;
+    position:absolute;
+    bottom:-1rem;
+    left:50%;
+    transform:translate(-50%, 50%);
+
+}
+.card-categories span{
+    font-size:1.6rem;
+    color:white;
+    cursor:pointer;
+}
+.card-categories span:hover{
+    color:red;
+}
+/***TOP PRODUCTS***/

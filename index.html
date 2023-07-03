@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda natural</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-principal">
+            <div class="iconos">
+                <div class="soporte-cliente">
+                    <i id= "icono-soporte" class="fa-solid fa-headset"></i>
+                    <div class="content-soporte">
+                        <span class="text">Soporte al cliente</span>
+                        <span class="number">123-456-790</span>
+                    </div>
+                </div>
+                <div class="container-logo">
+                    <img class="img-logo" src="imagenes/logo-amanacer.jpeg">
+                </div>
+                <div class="container-user">
+                    <i id="usuario" class="fa-solid fa-user"></i>
+                    <i id="cesta" class="fa-solid fa-basket-shopping"></i>
+                    <div class="shopping-content-cart">
+                        <span class="text-carrito">Carrito</span>
+                        <span class="number-carrito">(0)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-navbar">
+            <nav class="navbar-container">
+                <i id="icono-desplegable"class="fa-solid fa-bars"></i>
+                <ul class="menu">
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Productos</a></li>
+                    <li><a href="">Ofertas</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+            </nav>
+            <form class="search-form">
+                <input type="search" placeholder="Buscar..."/>
+                <button class="btn-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+    </header>
+    <section class="banner">
+        <div class="content-banner">
+            <p>Todos tus productos aquí</p>
+            <h2>100% Naturales</h2>
+            <a href="">Comprar ahora</a>   
+        </div>
+    </section>
+    <main class="main-content">
+        <section class="container-features">
+            <div id="plane" class="card-features">
+                <i class="fa-solid fa-plane-up"></i>
+                <div class="feature-content">
+                    <span>Envíos gratuitos en todo el país</span>
+                    <p>En pedido superior a $1800</p>
+                </div>
+
+            </div>
+            <div class="card-features">
+                <i class="fa-solid fa-wallet"></i>
+                <div class="feature-content">
+                    <span>Contrareembolso</span>
+                    <p>100% de garantía de devolución de dinero</p>
+                </div>
+
+            </div>
+            <div class="card-features">
+                <i class="fa-solid fa-gift"></i>
+                <div class="feature-content">
+                    <span>Tarjeta con regalo especial</span>
+                    <p>Ofrece bonos especiales con <br>regalo</p>
+                </div>
+
+            </div>
+            <div id= "services" class="card-features">
+                <i class="fa-sharp fa-solid fa-user-headset"></i>
+                <div class="feature-content">
+                    <span>Servicio al cliente 24/7</span>
+                    <p>Llámenos 24/7 al 123-456-790</p>
+                </div>
+
+            </div>
+        </section>
+        <section class="content-top-categories">
+            <h1>Mejores categorías</h1>
+            <div class="container-categories">
+                <div id="card1" class="card-categories">
+                    <p>Mix Frutos secos</p>
+                    <span>Ver más</span>
+                </div>
+                <div id="card2" class="card-categories">
+                    <p>Barras Proteicas</p>
+                    <span>Ver más</span>
+                </div>
+                <div id="card3" class="card-categories">
+                    <p>Yerbas orgánicas</p>
+                    <span>Ver más</span>
+                </div>
+            </div>
+        </section>
+        <section class="container top-product">
+            <h1>Las mejores ofertas</h1>
+            <div class="container-options">
+                <span class="active">Destacados</span>
+                <span>Más recientes</span>
+                <span>Los más vendidos</span>
+            </div>
+            <!--PRODUCTO 1-->
+            <div class="container-products">
+                <div class="card-product">
+                    <div class="container-img">
+                        <img class="mix" src="imagenes/mix-frutos-secos.jpg" alt="Mix frutos secos">
+                        <span class="discont">-13%</span>
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-regular fa-code-compare"></i></span>
+                            
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3>Mix de frutos secos</h3>
+                        <span class="add-cart">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </span>
+                        <p class="price">$2800<span>$3430</span></p>
+                    </div>
+                </div>  
+            </div>
+        </section>
+    </main>
+    <script src="https://kit.fontawesome.com/e235fe20a8.js" crossorigin="anonymous"></script>
+</body>
+</html>
