@@ -55,6 +55,10 @@ html{
     color: rgb(29, 54, 29);
     padding-left:1rem;
 }
+.inicio-sesion{
+    color:black;
+    font-size:12px;
+}
 .shopping-content-cart{
     display:flex;
     flex-direction:column;
@@ -331,8 +335,24 @@ h1{
 .container-img img{
     width:100%;
 }
-.content-card-product{
+/**CONTENT CARD PRODUCT**/
 
+/**Formulario**/
+.form-sesion{
+    padding-top:200px;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-sesion label, .form-sesion input, .form-sesion button{
+    padding: 10px 0;
+    width:300px;
+    margin-bottom: 10px;  
+}
+.button-sesion{
+    margin-top:10px;
 }
 
 
