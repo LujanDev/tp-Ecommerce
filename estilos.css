@@ -358,6 +358,11 @@ h1{
 .h2-productos, .div-foto, .ul-prod{
     padding: 0 40px;
 }
+/**login incorrecto***/
+#msjError{
+    margin-bottom:10px;
+    color:red;
+}
 
 
 

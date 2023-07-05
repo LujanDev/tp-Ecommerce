@@ -11,16 +11,17 @@
 <body>
     <div class="formulario">
     <form action="?" method="POST" class="form-sesion">
+        <p id="msjError"></p>
         <label>Ingresa tu usuario</label>
-        <input type="text" placeholder="Ingresa tu usuario único o dni" required>
+        <input id="user" type="text" placeholder="Ingresa tu usuario único o dni" required>
         <label>Contraseña</label>
-        <input type="password" placeholder="Escribe tu contraseña" required>
+        <input id="password" type="password" placeholder="Escribe tu contraseña" required>
         <div>
             <div class="g-recaptcha" data-sitekey="6Le3cfomAAAAACl-FBHXZGMvOS6dw4aX2dCuTUQg"></div>
         </div>
-        <button class="button-sesion" type="submit">Inicia sesión</button>
+        <button id="login" class="button-sesion" type="submit">Inicia sesión</button>
     </form>
     </div>
-      
+    <script src="login.js"></script>  
 </body>
 </html>
