@@ -354,7 +354,10 @@ h1{
 .button-sesion{
     margin-top:10px;
 }
-
+/*página abm.html*/
+.h2-productos, .div-foto, .ul-prod{
+    padding: 0 40px;
+}
 
 
 

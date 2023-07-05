@@ -7,18 +7,19 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <form id="formABM" class="form-sesion">
-    <label>Agregar foto</label>
-    <input id="foto-prod" type="text" required>
+    <form id="formABM" action="" method="POST" class="form-sesion" enctype="multipart/form-data">
+    <label for="imgAdd">Agregar foto</label>
+    <input name="imgAdd" id="foto-prod" type="file" size="120" required/>
     <label>Nombre del producto</label>
     <input id="nombre-prod" type="text" placeholder="Escribe el nombre del producto" required>
     <label>Detalle del producto</label>
     <input id="detalle-prod" type="text" placeholder="Escribe su detalle: marca, cantidad" required>
-    <button class="button-sesion" type="submit">Agregar</button>
+    <button id="button-abm" class="button-sesion" type="submit">Agregar</button>
     </form>
     <div>
-        <h2>Productos registrados:</h2>
-        <ul id="personasList"></ul>
+        <h2 class="h2-productos">Productos registrados:</h2>
+        <div class="div-foto" id="muestraImg"></div>
+        <ul class="ul-prod" id="personasList"></ul>
     </div>
 
 
