@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABM</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <form id="formABM" class="form-sesion">
+    <label>Agregar foto</label>
+    <input id="foto-prod" type="text" required>
+    <label>Nombre del producto</label>
+    <input id="nombre-prod" type="text" placeholder="Escribe el nombre del producto" required>
+    <label>Detalle del producto</label>
+    <input id="detalle-prod" type="text" placeholder="Escribe su detalle: marca, cantidad" required>
+    <button class="button-sesion" type="submit">Agregar</button>
+    </form>
+    <div>
+        <h2>Productos registrados:</h2>
+        <ul id="personasList"></ul>
+    </div>
+
+
+
+    <script src="abm.js"></script>
+</body>
+</html>
