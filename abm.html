@@ -7,19 +7,72 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+    <header>
+        <div class="header-principal">
+            <div class="iconos">
+                <div class="soporte-cliente">
+                    <i id= "icono-soporte" class="fa-solid fa-headset"></i>
+                    <div class="content-soporte">
+                        <span class="text">Soporte al cliente</span>
+                        <span class="number">123-456-790</span>
+                    </div>
+                </div>
+                <div class="container-logo">
+                    <img class="img-logo" src="imagenes/logo-amanacer.jpeg">
+                </div>
+                <div class="container-user">
+                    <i id="usuario" class="fa-solid fa-user"><a class="inicio-sesion" href="login.html">Inicia sesión</a></i>
+                    <i id="cesta" class="fa-solid fa-basket-shopping"></i>
+                    <div class="shopping-content-cart">
+                        <span class="text-carrito">Carrito</span>
+                        <span class="number-carrito">(0)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-navbar">
+            <nav class="navbar-container">
+                <i id="icono-desplegable"class="fa-solid fa-bars"></i>
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="">Productos</a></li>
+                    <li><a href="">Ofertas</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+            </nav>
+            <form class="search-form">
+                <input type="search" placeholder="Buscar..."/>
+                <button class="btn-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+    </header>
     <form id="formABM" action="#" method="POST" class="form-sesion" enctype="multipart/form-data">
     <label for="imgAdd">Agregar foto</label>
-    <input name="imgAdd" id="foto-prod" type="file" size="120" required/>
+    <input name="foto-prod" id="foto-prod" type="file" size="120" required/>
     <label>Nombre del producto</label>
-    <input id="nombre-prod" type="text" placeholder="Escribe el nombre del producto" required>
+    <input id="nombre-prod" name="nombre-prod" type="text" placeholder="Escribe el nombre del producto" required>
     <label>Detalle del producto</label>
-    <input id="detalle-prod" type="text" placeholder="Escribe su detalle: marca, cantidad" required>
+    <input id="detalle-prod" name="detalle-prod" type="text" placeholder="Escribe su detalle: marca, cantidad" required>
     <button id="button-abm" class="button-sesion" type="submit">Agregar</button>
     </form>
     <div>
         <h2 class="h2-productos">Productos registrados:</h2>
-        <div class="div-foto" id="muestraImg"></div>
         <ul class="ul-prod" id="personasList"></ul>
+        <table id="tablaInvent">
+            <thead>
+              <tr>
+                  <th>Foto</th>
+                  <th>Nombre</th>
+                  <th>Descripcion</th>
+                  <th>Eliminar</th>
+                  <th>Editar</th>
+               </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
     </div>
 
 
