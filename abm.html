@@ -40,15 +40,15 @@
                     <li><a href="">Contacto</a></li>
                 </ul>
             </nav>
-            <form class="search-form">
+            <!--<form class="search-form">
                 <input type="search" placeholder="Buscar..."/>
                 <button class="btn-search">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
-            </form>
+            </form>-->
         </div>
     </header>
-    <form id="formABM" action="#" method="POST" class="form-sesion" enctype="multipart/form-data">
+    <form name= "Actualizar" id="formABM" action="#" method="POST" class="form-sesion" enctype="multipart/form-data">
     <label for="imgAdd">Agregar foto</label>
     <input name="foto-prod" id="foto-prod" type="file" size="120" required/>
     <label>Nombre del producto</label>
@@ -68,12 +68,27 @@
                   <th>Descripcion</th>
                   <th>Eliminar</th>
                   <th>Editar</th>
+                  <th>Actualizar Datos</th>
                </tr>
             </thead>
             <tbody>
             </tbody>
           </table>
     </div>
+    <dialog  id="modal">
+        <form id="formModal" action="#" method="dialog" class="form-sesion" enctype="multipart/form-data">
+            <button id="btn-cerrar-modal">Cerrar</button>
+            <h3 class="h3-modal">Nuevo Registro</h3>
+            <label>Nombre del producto</label>
+            <input id="nombreProd" name="nombreProd" type="text" placeholder="Escribe el nombre del producto">
+            <label>Detalle del producto</label>
+            <input id="detalleProd" name="detalleProd" type="text" placeholder="Escribe su detalle: marca, cantidad">
+            <label for="imgAdd">Agregar foto</label>
+            <input name="fotoProd" id="fotoProd" type="file" size="120"/>
+            <button id="button-save" class="button-sesion" type="submit">Guardar</button>
+            </form>
+
+    </dialog>
 
 
 

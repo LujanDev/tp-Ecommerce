@@ -359,6 +359,16 @@ h1{
 .h2-productos, .div-foto, .ul-prod{
     padding: 0 40px;
 }
+.h3-modal{
+    text-align:center;
+}
+.translate{
+    transform: translateY(-100%);
+}
+.btn-cerrar-modal{
+    display: flex;
+    justify-content: center;
+}
 /**login**/
 .h1-login{
     margin-top:70px;

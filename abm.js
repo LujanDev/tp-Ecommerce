@@ -1,7 +1,33 @@
 /**Formulario ABM**/
 let formulario=document.getElementById('formABM');
 let personasList=document.getElementById('personasList');
+const tabla=document.getElementById('tablaInvent');
+const modal=document.querySelector('#modal');
+const inputs=document.querySelectorAll('input');
+const btnCerrarModal=document.querySelector("#btn-cerrar-modal");
 
+let count=0;
+
+/*window.addEventListener('click', (event)=>{
+    if(event.target.matches(".btn-editar")){
+        let data=event.target.parentElement.parentElement.children;
+        fillData(data);
+        modal.classList.toggle(".translate");
+    }
+    if(event.target.matches(".btn-cerrar-modal")){
+        
+        modal.classList.toggle(".translate");
+        count=0;
+    }
+    
+});
+const fillData=(data)=>{
+    for(let index of inputs){
+        count +=1;
+        index.value=data[count].textContent;
+        console.log(index);
+    }
+}*/
 
 formulario.addEventListener('submit', function(e){
     e.preventDefault();
@@ -27,18 +53,56 @@ formulario.addEventListener('submit', function(e){
     botonEliminar.addEventListener("click", (event)=>{
         event.target.parentNode.parentNode.remove();
     });
-
-
-
-    //crear un li con los datos
-
-    //let listItem= document.createElement('li');
+    //boton editar
+    let nuevaCeldaEditar=nuevaFila.insertCell(4);
+    let botonEditar=document.createElement("button");
+    botonEditar.textContent="Editar";
+    botonEditar.className="btn-editar";
+    nuevaCeldaEditar.appendChild(botonEditar);
+    //botonEditar.addEventListener("click", (event)=>{
+     //   event.target.parentNode.cambiarContenido();
+     botonEditar.addEventListener("click", ()=>{
+        modal.showModal();
+    });
+    btnCerrarModal.addEventListener("click", ()=>{
+        modal.closest();
+    });
+    let celdaActualizarDatos=nuevaFila.insertCell(5);
+    let botonActualizar=document.createElement("button");
+    botonActualizar.textContent="Actualizar";
+    botonActualizar.className="btn-actualizar";
+    celdaActualizarDatos.appendChild(botonActualizar);
     
-    //listItem.innerHTML=fotoProd+' '+nombreProd+' '+detalleProd;
+    //al accionar botón actualizar
+
+    function pregunta_Validar_Campos(){
+    let obtenerDato=document.getElementsByTagName("td");
+    let datoTd1=obtenerDato[0].innerHTML;
+    let datoTd2=obtenerDato[1].innerHTML;
+    let datoTd3=obtenerDato[2].innerHTML;
+        var aArray= [datoTd1, datoTd2, datoTd3];
+        
+         var table = document.getElementById("tablaInvent");
+          var rowCount = table.rows.length;
+        
+        
+         // Recorremos todas las filas y columnas de la tabla con el objetivo de recuperar y validar todos los campos introducidos en la tabla 
+                 for (var i = 0; i < rowCount-1; i++) {
+                    for (var j= 0; j < aArray.length; j++) {
+                        
+            document.write(aArray[j]);  // aqui solo testea los valores recibidos llegando solo los campos de la primera fila
+                                                              }
+                if (confirm('Los datos serán guardados en la Base de Datos. ¿Estás seguro de realizar esta acción?'))
+               {document.Actualizar.submit() } 
+                                           } 
+                                        }
     
-    //Agregar el elemento de la lista a la lista de personas
-    //personasList.appendChild(listItem);
+    botonActualizar.addEventListener("click", ()=>{
+        pregunta_Validar_Campos();
+        
+    })
     
     formulario.reset();
 
 });
+
