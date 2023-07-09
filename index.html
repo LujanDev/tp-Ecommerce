@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -25,14 +26,52 @@
                 </div>
                 <div class="container-user">
                     <i id="usuario" class="fa-solid fa-user"><a class="inicio-sesion" href="login.html">Inicia sesión</a></i>
-                    <i id="cesta" class="fa-solid fa-basket-shopping"></i>
+                    <!--<i id="cesta" class="fa-solid fa-basket-shopping"></i>
                     <div class="shopping-content-cart">
                         <span class="text-carrito">Carrito</span>
                         <span class="number-carrito">(0)</span>
+                    </div> -->
+                </div>
+                <div class="container-icon">
+                    <div class="container-cart-icon">
+                        <i id="cesta" class="fa-solid fa-basket-shopping"></i>
+                        <!--<div class="count-products">
+                        span class="text-carrito">Carrito</span>
+                        <span id="contador-productos" class="number-carrito">(0)</span>
+                        </div>-->
+        
+                    </div>
+        
+                    <div class="count-products">
+                        <span id="contador-productos">0</span>
+                    </div>
+        
+                    <div class="container-cart-products hidden-cart">
+                        <div class="row-product">
+                            <div class="cart-product">
+                                <div class="info-cart-product">
+                                    <span class="cantidad-producto-carrito">1</span>
+                                    <p class="titulo-producto-carrito">Miel</p>
+                                    <span class="precio-producto-carrito">$680</span>
+                                </div>
+                                 <div class="close">
+                                <i class="fa-solid fa-xmark"></i>
+                                 </div>
+                            </div>
+                            <div class="cart-total">
+                                <h3>Total:</h3>
+                                <span class="total-pagar">$680</span>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
+       
+    
+        
         <div class="container-navbar">
             <nav class="navbar-container">
                 <i id="icono-desplegable"class="fa-solid fa-bars"></i>
@@ -138,70 +177,77 @@
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                         </div>
+                        <div class="info-product">
                         <h3>Mix de frutos secos</h3>
                         <span class="add-cart">
                             <i class="fa-solid fa-basket-shopping"></i>
                         </span>
-                        <p class="price">$2800<span>$3430</span></p>
+                        <p class="price">$2800</p>
+                        <button class="btn-añadir-cart">Añadir al carrito</button>
+                        </div>
                     </div>
                 </div>  
             <!--PRODUCTO 2-->
-            <div class="card-product">
-                <div class="container-img">
-                    <img class="mix" src="imagenes/mix-frutos-secos.jpg" alt="Mix frutos secos">
-                    <span class="discont">-13%</span>
-                    <div class="button-group">
+                <div class="card-product">
+                    <div class="container-img">
+                        <img class="mix" src="imagenes/mix-frutos-secos.jpg" alt="Mix frutos secos">
+                        <span class="discont">-13%</span>
+                        <div class="button-group">
                         <span><i class="fa-regular fa-eye"></i></span>
                         <span><i class="fa-regular fa-heart"></i></span>
                         <span><i class="fa-regular fa-code-compare"></i></span>
                         
+                        </div>
                     </div>
-                </div>
-                <div class="content-card-product">
-                    <div class="stars">
+                    <div class="content-card-product">
+                        <div class="stars">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
-                    </div>
-                    <h3>Mix de frutos secos</h3>
-                    <span class="add-cart">
+                        </div>
+                        <div class="info-product">
+                        <h3>Mix de frutos secos</h3>
+                        <span class="add-cart">
                         <i class="fa-solid fa-basket-shopping"></i>
-                    </span>
-                    <p class="price">$2800<span>$3430</span></p>
+                        </span>
+                        <p class="price">$2800</p>
+                        <button class="btn-añadir-cart">Añadir al carrito</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
             <!--producto 3-->
-            <div class="card-product">
-                <div class="container-img">
-                    <img class="mix" src="imagenes/mix-frutos-secos.jpg" alt="Mix frutos secos">
-                    <span class="discont">-13%</span>
-                    <div class="button-group">
+                <div class="card-product">
+                    <div class="container-img">
+                        <img class="mix" src="imagenes/mix-frutos-secos.jpg" alt="Mix frutos secos">
+                        <span class="discont">-13%</span>
+                        <div class="button-group">
                         <span><i class="fa-regular fa-eye"></i></span>
                         <span><i class="fa-regular fa-heart"></i></span>
                         <span><i class="fa-regular fa-code-compare"></i></span>
-                        
+                        </div>
                     </div>
-                </div>
-                <div class="content-card-product">
-                    <div class="stars">
+                    <div class="content-card-product">
+                        <div class="stars">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
+                    <div class="info-product"></div>
                     <h3>Mix de frutos secos</h3>
                     <span class="add-cart">
                         <i class="fa-solid fa-basket-shopping"></i>
                     </span>
-                    <p class="price">$2800<span>$3430</span></p>
+                    <p class="price">$2800</p>
+                    <button class="btn-añadir-cart">Añadir al carrito</button>
+                    </div>
                 </div>
-            </div>
             <!--PRODUCTO 4-->
-            <div class="card-product">
-                <div class="container-img">
+                <div class="card-product">
+                    <div class="container-img">
                     <img class="mix" src="imagenes/mix-frutos-secos.jpg" alt="Mix frutos secos">
                     <span class="discont">-13%</span>
                     <div class="button-group">
@@ -219,16 +265,22 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
+                    <div class="info-product">
                     <h3>Mix de frutos secos</h3>
                     <span class="add-cart">
                         <i class="fa-solid fa-basket-shopping"></i>
                     </span>
-                    <p class="price">$2800<span>$3430</span></p>
+                    <p class="price">$2800</p>
+                    <button class="btn-añadir-cart">Añadir al carrito</button>
+                    </div>
                 </div>
-            </div>
+                </div>
             </div>
         </section>
     </main>
+    
     <script src="https://kit.fontawesome.com/e235fe20a8.js" crossorigin="anonymous"></script>
+    <script src="carrito.js"></script>
+    
 </body>
 </html>

@@ -8,26 +8,6 @@ const btnCerrarModal=document.querySelector("#btn-cerrar-modal");
 
 let count=0;
 
-/*window.addEventListener('click', (event)=>{
-    if(event.target.matches(".btn-editar")){
-        let data=event.target.parentElement.parentElement.children;
-        fillData(data);
-        modal.classList.toggle(".translate");
-    }
-    if(event.target.matches(".btn-cerrar-modal")){
-        
-        modal.classList.toggle(".translate");
-        count=0;
-    }
-    
-});
-const fillData=(data)=>{
-    for(let index of inputs){
-        count +=1;
-        index.value=data[count].textContent;
-        console.log(index);
-    }
-}*/
 
 formulario.addEventListener('submit', function(e){
     e.preventDefault();
