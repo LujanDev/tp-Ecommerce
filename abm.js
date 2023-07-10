@@ -21,12 +21,18 @@ formulario.addEventListener('submit', function(e){
     let llenarTabla=document.getElementById("tablaInvent");
     let nuevaFila=llenarTabla.insertRow(-1);
     let nuevaCelda=nuevaFila.insertCell(0);
-    nuevaCelda.textContent=transaccion.get("foto-prod");
+    let seleccionarProduc=document.createElement("input");
+    seleccionarProduc.type="checkbox";
+    seleccionarProduc.name="checkbox";
+    nuevaCelda.appendChild(seleccionarProduc);
+
     nuevaCelda=nuevaFila.insertCell(1);
-    nuevaCelda.textContent=transaccion.get("nombre-prod");
+    nuevaCelda.textContent=transaccion.get("foto-prod");
     nuevaCelda=nuevaFila.insertCell(2);
+    nuevaCelda.textContent=transaccion.get("nombre-prod");
+    nuevaCelda=nuevaFila.insertCell(3);
     nuevaCelda.textContent=transaccion.get("detalle-prod");
-    let nuevaCeldaEliminar=nuevaFila.insertCell(3);
+    let nuevaCeldaEliminar=nuevaFila.insertCell(4);
     let botonEliminar=document.createElement("button");
     botonEliminar.textContent="Eliminar";
     nuevaCeldaEliminar.appendChild(botonEliminar);
@@ -34,7 +40,7 @@ formulario.addEventListener('submit', function(e){
         event.target.parentNode.parentNode.remove();
     });
     //boton editar
-    let nuevaCeldaEditar=nuevaFila.insertCell(4);
+    let nuevaCeldaEditar=nuevaFila.insertCell(5);
     let botonEditar=document.createElement("button");
     botonEditar.textContent="Editar";
     botonEditar.className="btn-editar";
@@ -47,7 +53,7 @@ formulario.addEventListener('submit', function(e){
     btnCerrarModal.addEventListener("click", ()=>{
         modal.closest();
     });
-    let celdaActualizarDatos=nuevaFila.insertCell(5);
+    let celdaActualizarDatos=nuevaFila.insertCell(6);
     let botonActualizar=document.createElement("button");
     botonActualizar.textContent="Actualizar";
     botonActualizar.className="btn-actualizar";
@@ -81,7 +87,16 @@ formulario.addEventListener('submit', function(e){
         pregunta_Validar_Campos();
         
     })
-    
+    let botonEliminarChequeado=document.getElementById("deleteAll");
+    botonEliminarChequeado.addEventListener('click', ()=>{
+        let checkboxs= document.getElementsByName("checkbox");
+        checkboxs.forEach((v)=>{
+            if(v.checked){
+                v.parentElement.parentElement.remove();
+            }
+        })
+    })
+
     formulario.reset();
 
 });
