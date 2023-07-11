@@ -52,12 +52,15 @@
     <form name= "Actualizar" id="formABM" action="#" method="POST" class="form-sesion" enctype="multipart/form-data">
     <label for="imgAdd">Agregar foto</label>
     <input name="foto-prod" id="foto-prod" type="file" size="120" required/>
+    <div id="imgPre">
+    </div>
     <label>Nombre del producto</label>
     <input id="nombre-prod" name="nombre-prod" type="text" placeholder="Escribe el nombre del producto" required>
     <label>Detalle del producto</label>
     <input id="detalle-prod" name="detalle-prod" type="text" placeholder="Escribe su detalle: marca, cantidad" required>
     <button id="button-abm" class="button-sesion" type="submit">Agregar</button>
     </form>
+    
     <div>
         <h2 class="h2-productos">Productos registrados:</h2>
         <ul class="ul-prod" id="personasList"></ul>

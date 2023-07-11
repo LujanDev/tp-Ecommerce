@@ -96,8 +96,30 @@ formulario.addEventListener('submit', function(e){
             }
         })
     })
+    /*document.getElementById('foto-prod').addEventListener('change',function(event){
+        let archivoImagen= event.target.files[0];
+        let reader = new FileReader();
+
+        reader.onload = ()=>{
+            let dataUrl =reader.result;
+            let divImagen=document.getElementById('imgPre');
+            divImagen.innerHTML='<img src="' +dataUrl+ '" alt="imagen">';
+        };
+        reader.readAsDataURL(archivoImagen);
+    });*/
 
     formulario.reset();
 
 });
 
+document.getElementById('foto-prod').addEventListener('change',function(event){
+    let archivoImagen= event.target.files[0];
+    let reader = new FileReader();
+
+    reader.onload = ()=>{
+        let dataUrl =reader.result;
+        let divImagen=document.getElementById('imgPre');
+        divImagen.innerHTML='<img width="100px" heigth="100px" src="' +dataUrl+ '" alt="imagen">';
+    };
+    reader.readAsDataURL(archivoImagen);
+});
