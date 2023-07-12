@@ -153,6 +153,7 @@ formuModal.addEventListener('submit', function(e){
 
 });
 
-/*btnCerrarModal.addEventListener("click", ()=>{
-    modal.closest();
-});*/
+function cerrarVentana(){
+    //la referencia de la ventana es el objeto window del popup. Lo utilizo para acceder al método close
+    modal.close()
+}
