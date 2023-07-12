@@ -27,18 +27,18 @@ formulario.addEventListener('submit', function(e){
     nuevaCelda.appendChild(seleccionarProduc);
     
     nuevaCelda=nuevaFila.insertCell(1);
-    let imagen=document.querySelectorAll('img');
+    let imagen=document.getElementById('imgForm').src;
     
-    nuevaCelda.textContent=transaccion.get("foto-prod");
+    //nuevaCelda.textContent=transaccion.get("foto-prod");
     //¿Cómo insertar en esta celda la imagen del formulario?
     //"foto-prod"
    
     
-    /*nuevaCelda.insertAdjacentHTML(
+    nuevaCelda.insertAdjacentHTML(
         "beforeend",
-        `<img src=${imagen} alt=${imagen}>` // Backticks para img variable
+        `<img width="50px" heigth="50px"src=${imagen} alt=${imagen}>` // Backticks para img variable
       );
-    */
+    
     /*const imagen = "imagen.png" //Img en variable para enviar lo que desees
     const contenedor = document.getElementById("imgContainer");
     contenedor.insertAdjacentHTML(
@@ -133,3 +133,20 @@ document.getElementById('foto-prod').addEventListener('change',function(event){
     };
     reader.readAsDataURL(archivoImagen);
 });
+
+
+//codigo para insertar la imagen en la celda de la tabla
+/*
+nuevaCelda.setAttribute("id", "idPrueba");
+    document.getElementById('foto-prod').addEventListener('change',function(event){
+    let archivoImagen= event.target.files[0];
+    let reader = new FileReader();
+
+    reader.onload = ()=>{
+        let dataUrl =reader.result;
+        let celda=document.getElementById('idPrueba');
+        celda.innerHTML='<img id="imgForm" width="50px" heigth="50px" src="' +dataUrl+ '" alt="imagen">';
+    };
+    reader.readAsDataURL(archivoImagen);
+});
+*/
