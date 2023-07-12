@@ -25,9 +25,27 @@ formulario.addEventListener('submit', function(e){
     seleccionarProduc.type="checkbox";
     seleccionarProduc.name="checkbox";
     nuevaCelda.appendChild(seleccionarProduc);
-
+    
     nuevaCelda=nuevaFila.insertCell(1);
+    let imagen=document.querySelectorAll('img');
+    
     nuevaCelda.textContent=transaccion.get("foto-prod");
+    //¿Cómo insertar en esta celda la imagen del formulario?
+    //"foto-prod"
+   
+    
+    /*nuevaCelda.insertAdjacentHTML(
+        "beforeend",
+        `<img src=${imagen} alt=${imagen}>` // Backticks para img variable
+      );
+    */
+    /*const imagen = "imagen.png" //Img en variable para enviar lo que desees
+    const contenedor = document.getElementById("imgContainer");
+    contenedor.insertAdjacentHTML(
+      "beforeend",
+      `<img src=${imagen} alt=${imagen}>` // Backticks para img variable
+    );*/
+
     nuevaCelda=nuevaFila.insertCell(2);
     nuevaCelda.textContent=transaccion.get("nombre-prod");
     nuevaCelda=nuevaFila.insertCell(3);
@@ -63,10 +81,11 @@ formulario.addEventListener('submit', function(e){
 
     function pregunta_Validar_Campos(){
     let obtenerDato=document.getElementsByTagName("td");
-    let datoTd1=obtenerDato[0].innerHTML;
+    //let datoTd1=obtenerDato[0].innerHTML;
     let datoTd2=obtenerDato[1].innerHTML;
     let datoTd3=obtenerDato[2].innerHTML;
-        var aArray= [datoTd1, datoTd2, datoTd3];
+    let datoTd4=obtenerDato[3].innerHTML;
+        var aArray= [datoTd2, datoTd3, datoTd4];
         
          var table = document.getElementById("tablaInvent");
           var rowCount = table.rows.length;
@@ -96,22 +115,13 @@ formulario.addEventListener('submit', function(e){
             }
         })
     })
-    /*document.getElementById('foto-prod').addEventListener('change',function(event){
-        let archivoImagen= event.target.files[0];
-        let reader = new FileReader();
 
-        reader.onload = ()=>{
-            let dataUrl =reader.result;
-            let divImagen=document.getElementById('imgPre');
-            divImagen.innerHTML='<img src="' +dataUrl+ '" alt="imagen">';
-        };
-        reader.readAsDataURL(archivoImagen);
-    });*/
 
     formulario.reset();
 
 });
 
+//Previsualización de la imagen al cargarla en el formulario
 document.getElementById('foto-prod').addEventListener('change',function(event){
     let archivoImagen= event.target.files[0];
     let reader = new FileReader();
@@ -119,7 +129,7 @@ document.getElementById('foto-prod').addEventListener('change',function(event){
     reader.onload = ()=>{
         let dataUrl =reader.result;
         let divImagen=document.getElementById('imgPre');
-        divImagen.innerHTML='<img width="100px" heigth="100px" src="' +dataUrl+ '" alt="imagen">';
+        divImagen.innerHTML='<img id="imgForm" width="100px" heigth="100px" src="' +dataUrl+ '" alt="imagen">';
     };
     reader.readAsDataURL(archivoImagen);
 });
