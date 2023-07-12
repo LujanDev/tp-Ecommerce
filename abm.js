@@ -5,8 +5,10 @@ const tabla=document.getElementById('tablaInvent');
 const modal=document.querySelector('#modal');
 const inputs=document.querySelectorAll('input');
 const btnCerrarModal=document.querySelector("#btn-cerrar-modal");
-
 let count=0;
+//crear al botón guardar del modal, la funcionionalidad para que edite
+const btnGuardarModal=document.querySelector("#button-save");
+let formuModal=document.getElementById('formModal');
 
 
 formulario.addEventListener('submit', function(e){
@@ -27,12 +29,10 @@ formulario.addEventListener('submit', function(e){
     nuevaCelda.appendChild(seleccionarProduc);
     
     nuevaCelda=nuevaFila.insertCell(1);
+    nuevaCelda.setAttribute("id", "celdaImagen");
     let imagen=document.getElementById('imgForm').src;
     
     //nuevaCelda.textContent=transaccion.get("foto-prod");
-    //¿Cómo insertar en esta celda la imagen del formulario?
-    //"foto-prod"
-   
     
     nuevaCelda.insertAdjacentHTML(
         "beforeend",
@@ -47,8 +47,10 @@ formulario.addEventListener('submit', function(e){
     );*/
 
     nuevaCelda=nuevaFila.insertCell(2);
+    nuevaCelda.setAttribute("id", "celdaNombre");
     nuevaCelda.textContent=transaccion.get("nombre-prod");
     nuevaCelda=nuevaFila.insertCell(3);
+    nuevaCelda.setAttribute("id", "celdaDetalle");
     nuevaCelda.textContent=transaccion.get("detalle-prod");
     let nuevaCeldaEliminar=nuevaFila.insertCell(4);
     let botonEliminar=document.createElement("button");
@@ -68,9 +70,9 @@ formulario.addEventListener('submit', function(e){
      botonEditar.addEventListener("click", ()=>{
         modal.showModal();
     });
-    btnCerrarModal.addEventListener("click", ()=>{
-        modal.closest();
-    });
+    //btnCerrarModal.addEventListener("click", ()=>{
+    //    modal.closest();
+    //});
     let celdaActualizarDatos=nuevaFila.insertCell(6);
     let botonActualizar=document.createElement("button");
     botonActualizar.textContent="Actualizar";
@@ -135,18 +137,22 @@ document.getElementById('foto-prod').addEventListener('change',function(event){
 });
 
 
-//codigo para insertar la imagen en la celda de la tabla
-/*
-nuevaCelda.setAttribute("id", "idPrueba");
-    document.getElementById('foto-prod').addEventListener('change',function(event){
-    let archivoImagen= event.target.files[0];
-    let reader = new FileReader();
+formuModal.addEventListener('submit', function(e){
+    e.preventDefault();
+    let operacion= new FormData(formuModal);
+    let editarTabla=document.getElementById("tablaInvent");
+    //primer celda=> id: celdaImagen
+    //segunda celda=> id: celdaNombre
+    let celda_imagen=document.getElementById('celdaImagen');
+    celda_imagen.textContent=operacion.get("fotoProd");
+    let celda_nombre=document.getElementById('celdaNombre');
+    celda_nombre.textContent=operacion.get('nombreProd');
+    let celda_detalle= document.getElementById('celdaDetalle');
+    celda_detalle.textContent=operacion.get('detalleProd');
+    
 
-    reader.onload = ()=>{
-        let dataUrl =reader.result;
-        let celda=document.getElementById('idPrueba');
-        celda.innerHTML='<img id="imgForm" width="50px" heigth="50px" src="' +dataUrl+ '" alt="imagen">';
-    };
-    reader.readAsDataURL(archivoImagen);
 });
-*/
+
+/*btnCerrarModal.addEventListener("click", ()=>{
+    modal.closest();
+});*/
